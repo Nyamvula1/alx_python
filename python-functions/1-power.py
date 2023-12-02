@@ -1,3 +1,3 @@
-def power(a,b):
-    return a^b
-power
+def pow(a,b):
+    return a**b
+pow
