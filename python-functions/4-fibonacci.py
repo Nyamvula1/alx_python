@@ -1,8 +1,7 @@
 def fibonacci_sequence(n):
-    if n == 0:
-      return 0
-    elif n == 1:
-      return 1
+    n=int(input())
+    if n <= 1:
+        return n
     else:
-      return fibonacci_sequence(n-1)+fibonacci_sequence(n-2)
-n=int(input())
+        return fibonacci_sequence(n-1) + fibonacci_sequence(n-2)
+
