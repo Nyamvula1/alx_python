@@ -2,7 +2,7 @@ if __name__ == '__main__':
     a=1
     b=2
         
-import add_0
+from add_0 import add 
 c=a+b 
 print("{}+{}={}" .format(a, b, c))
 
