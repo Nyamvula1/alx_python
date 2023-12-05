@@ -3,6 +3,6 @@ if __name__ == '__main__':
     b=2
     c=a+b     
 import add_0 
-add=a+b
+add_0.add(a,b)
 print("{}+{}={}" .format(a, b, c))
 
