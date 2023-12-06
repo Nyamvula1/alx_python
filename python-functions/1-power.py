@@ -1,3 +1,3 @@
 def pow(a,b):
     return a**b
-pow
+print (pow(2,4))

@@ -8,9 +8,9 @@ def myarguments():
     if n == 0:
        output = output  + "0 arguments.\n"
     elif n == 1:
-       output += "1 argument: \n"
+       output += "1 argument:\n"
     else:
-       output += "{} arguments: \n".format(n)
+       output += "{} arguments:\n".format(n)
        
     #tunatengeza for loop kucheck arguments kwa list(enumerating is numbering and this function will number our argumnets)
     for i, j in enumerate(arguments, 1):
