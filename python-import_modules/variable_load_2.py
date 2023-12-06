@@ -1,4 +1,4 @@
 import random
 def var(a):
-    print(a)
-var
+    a=98
+    return a
