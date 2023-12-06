@@ -6,15 +6,15 @@ def myarguments():
     output = ""
   
     if n == 0:
-       output = output  + "0 arguments."
+       output = output  + "0 arguments.\n"
     elif n == 1:
-       output += "1 argument: "
+       output += "1 argument: \n"
     else:
-       output += "{} arguments: ".format(n)
+       output += "{} arguments: \n".format(n)
        
     #tunatengeza for loop kucheck arguments kwa list(enumerating is numbering and this function will number our argumnets)
     for i, j in enumerate(arguments, 1):
-        output += "{}: {}".format(i, j)
+        output += "{}: {}\n".format(i, j)
 
     return output.strip()
 
