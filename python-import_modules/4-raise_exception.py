@@ -3,7 +3,6 @@ def raise_type_exception():
         raise TypeError('This is a custom exception')
         
     except TypeError as te:
-        print("Exception raised: {}")
-        return te
+        print("Exception raised")
         
     
