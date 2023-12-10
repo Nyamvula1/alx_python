@@ -1,7 +1,8 @@
-def raise_exception():
-    raise_exception = __import__('4-raise_exception').raise_exception
+def raise_type_exception():
+    try:
+        raise TypeError("This is a custom type exception.")
+    except TypeError as e:
+        print(f"Caught an exception: {e}")
 
-try:
-    raise_exception()
-except TypeError as te:
-    print("Exception raised")
+# Example usage:
+raise_type_exception()
