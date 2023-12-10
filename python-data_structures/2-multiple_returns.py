@@ -4,5 +4,5 @@ def multiple_returns(sentence):
     length = len(sentence)
     first_char = sentence[0]
     print("Length: {:d} - First character: {}".format(length, first_char))
-    return length, first_char
+    
 
