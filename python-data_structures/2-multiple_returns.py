@@ -6,4 +6,3 @@ def multiple_returns(sentence):
     print("Length: {:d} - First character: {}".format(length, first_char))
     return length, first_char
 
-multiple_returns("Holberton")
