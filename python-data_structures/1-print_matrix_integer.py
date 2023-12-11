@@ -9,8 +9,9 @@ def square_matrix(matrix=[]):
 
 result = square_matrix(matrix=[])
 for row in result:
-    formatted_row = ', '.join(map("{}".format, row))
-    print("[{}],".format(formatted_row))
+    print("[{}],".format(result))
+
+
 
 
 
