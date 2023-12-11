@@ -1,15 +1,14 @@
-def square_matrix(matrix=[]):
-    result=[]
+def print_matrix_integer(matrix):
     for row in matrix:
-        square_row = []
-        for element in row:
-            square_row.append(element ** 2)
-        result.append(square_row)
-    return result
-
-result = square_matrix(matrix=[])
-for row in result:
-    print("[{}],".format(result))
+        for i, number in enumerate(row):
+            if i == len(row) -1:
+                print("{:d}".format(number))
+            else:
+                print("{:d}".format(number), end=' ')
+                  
+def print_matrix_integer(matrix):
+            for row in matrix:
+                print(*row)
 
 
 
