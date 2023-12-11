@@ -1,24 +1,17 @@
 def safe_print_division(a, b):
-    
     try:
-        result = a / b
+        result = a/b
     except ZeroDivisionError:
-        print("Division by zero is not allowed.")
         result = None
     finally:
-        print("inside result: {}".format(result))
+        print('Inside result: {}'.format(result))
         return result
-
-        
-if __name__ == '__main__':        
+    
+if __name__=='__main__':
     a = 12
     b = 0
     result = safe_print_division(a, b)
-    print("{} / {} = {}".format(a, b, result))
-
-   
-    
-      
+    print("{} / {} = {} ".format(a, b, result))    
 
 
  
