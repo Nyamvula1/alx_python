@@ -1,13 +1,13 @@
 def raise_type_exception():
+    raise TypeError('Exception raised')
+
+if __name__ == '__main__': 
     try:
-        raise TypeError('This is a custom exception')
-        
+        raise_type_exception()
+
     except TypeError as te:
         print("Exception raised")
-        return te
+       
         
     
-if __name__ == '__main__': 
-    x = raise_type_exception
-    print(x)
-raise_type_exception()
+
