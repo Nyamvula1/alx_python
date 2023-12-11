@@ -6,7 +6,7 @@ if __name__ == '__main__':
         raise_type_exception()
 
     except TypeError as te:
-        print("Exception raised")
+        print("Exception has been raised")
        
         
     
