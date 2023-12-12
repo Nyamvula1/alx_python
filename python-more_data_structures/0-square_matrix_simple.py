@@ -9,15 +9,15 @@ def square_matrix_simple(matrix=[]):
         
         square_matrix.append(square_row)
     return square_matrix
-
-square_matrix_simple()
 matrix = [
     [1, 2, 3],
     [4, 5, 6],
     [7, 8, 9]
 ]
-new_matrix = square_matrix_simple(matrix)
-print(new_matrix)
+if __name__ == '__main__':  
+    new_matrix = square_matrix_simple(matrix)
+    for row in new_matrix:
+        print("[{}]".format(", ".join(map(str, row))))
 
 
 
