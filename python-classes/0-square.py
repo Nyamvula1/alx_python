@@ -3,12 +3,12 @@ class Square():
         self.__size = size
         
 if __name__ == "__main__":
-    square_1 = Square(3)
-    print(square_1.__size)
-    print(square_1.__dict__)
+    my_square = Square(3)
+    print(my_square.__size)
+    print(my_square.__dict__)
 
 try:
-    print(square_1.__size)
+    print(my_square.__size)
 except Exception as e:
     print(e)
 
