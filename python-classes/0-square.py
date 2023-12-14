@@ -5,7 +5,7 @@ class Square():
  #This indicates that mysquare is an instance of the Square class, and the dictionary containing the size is printed as expected.       
 if __name__ == "__main__":
     my_square = Square(3)
-    print(type(my_square.__size))
+    print(type(my_square))
     print(my_square.dict__)
 
 try:
