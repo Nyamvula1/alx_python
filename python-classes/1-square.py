@@ -2,7 +2,7 @@
 class Square():
     '''I am now initializing the size of the class'''
     def __init__(self, size=0):
-        
+        '''isinstance is used to check the type of data in a parameter'''
         if not isinstance(size, int):
             raise TypeError('size must be an integer')
         elif size < 0:
