@@ -1,8 +1,8 @@
 """this is a class of my_square.
-    It does nothing hence the pass function .
+    It calculates the square size and formats the output
 """
 class Square:
-    '''initializing size'''
+    '''initializing size of the square'''
     def __init__(self, size=0):
         self.size = size
     @property
