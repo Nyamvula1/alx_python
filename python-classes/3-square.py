@@ -1,19 +1,19 @@
-"""This a square class that is used to return the size of the square
-    and the area of a square using the value of the square.
+"""this is a class of my_square.
+    It does nothing hence the pass function .
 """
-class Square():
-    '''isinstance is used to check the type of data in a parameter'''  
+class Square:
+    '''initializing size'''
     def __init__(self, size=0):
         self.size = size
     @property
-    def size(self): 
+    def size(self):
         return self.__size 
     @size.setter
-    def size (self, value):
-        if not isinstance(value, int):
-            raise TypeError('size must be an integer')
+    def size(self, value):
+        if not isinstance(value,int):
+            raise TypeError("size must be an integer")
         elif value < 0:
-            raise ValueError ('size must be >= 0')
+            raise ValueError("size must be >= 0")
         else:
             self.__size = value
               
