@@ -1,14 +1,18 @@
-'''This a square class that is used to return the size of the square'''
+"""This a square class that is used to return the size of the square
+and the area of a square using the value of the square.
+"""
 class Square():
-    '''I am now initializing the size of the class'''   
     
+    '''I am now initializing the size of the class'''   
     def __init__(self, size=0):
         self.size = size
+        
     '''this is a method used to privatize the size'''
+    '''gets the size and returns as private'''
     @property
     def size(self): 
         return self.__size 
-    '''gets the size and returns as private'''
+    
     '''sets the value of the size '''
     @size.setter
     def size (self, value):
@@ -18,7 +22,8 @@ class Square():
         elif value < 0:
             raise ValueError ('size must be >= 0')
         else:
-            self.__size = value  
+            self.__size = value
+              
     def area(self):
         return self.__size ** 2
 if __name__ == '__main__':
