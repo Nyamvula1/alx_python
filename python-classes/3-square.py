@@ -4,9 +4,12 @@ class Square():
     
     def __init__(self, size=0):
         self.size = size
+    '''this is a method used to privatize the size'''
     @property
-    def size(self):
+    def size(self): 
         return self.__size 
+    '''gets the size and returns as private'''
+    '''sets the value of the size '''
     @size.setter
     def size (self, value):
         '''isinstance is used to check the type of data in a parameter'''
