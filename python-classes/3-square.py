@@ -5,6 +5,7 @@ class Square():
     
     '''I am now initializing the size of the class'''   
     def __init__(self, size=0):
+        '''isinstance is used to check the type of data in a parameter'''
         self.size = size
         
     '''this is a method used to privatize the size'''
