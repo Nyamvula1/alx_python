@@ -2,22 +2,14 @@
     and the area of a square using the value of the square.
 """
 class Square():
-    
-    '''I am now initializing the size of the class'''   
+    '''isinstance is used to check the type of data in a parameter'''  
     def __init__(self, size=0):
-        '''isinstance is used to check the type of data in a parameter'''
         self.size = size
-        
-    '''this is a method used to privatize the size'''
-    '''gets the size and returns as private'''
     @property
     def size(self): 
         return self.__size 
-    
-    '''sets the value of the size '''
     @size.setter
     def size (self, value):
-        '''isinstance is used to check the type of data in a parameter'''
         if not isinstance(value, int):
             raise TypeError('size must be an integer')
         elif value < 0:
