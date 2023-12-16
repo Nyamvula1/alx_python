@@ -1,5 +1,5 @@
 """This a square class that is used to return the size of the square
-and the area of a square using the value of the square.
+    and the area of a square using the value of the square.
 """
 class Square():
     
