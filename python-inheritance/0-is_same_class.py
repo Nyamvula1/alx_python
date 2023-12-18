@@ -25,12 +25,12 @@ You call the is_same_class function for each of the classes (int, float, and obj
 and store the results in result_int, result_float, and result_object. 
 Then, you print these results.
 '''
-result_int = is_same_class(a, int)
-result_float = is_same_class(a, float)
-result_object = is_same_class(a, object)
+#result_int = is_same_class(a, int)
+#result_float = is_same_class(a, float)
+#result_object = is_same_class(a, object)
 
-print(result_int)     # Output: True
-print(result_float)   # Output: False
-print(result_object)
+#print(result_int)     # Output: True
+#print(result_float)   # Output: False
+#print(result_object)
 
 
