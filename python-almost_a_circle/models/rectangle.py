@@ -75,5 +75,5 @@ class Rectangle(Base):
             '''printing the output in a string'''
     def  __str__(self):
         '''Update the class Rectangle by overriding the __str__ method so that it returns'''
-        return '[Rectangle] ({}), {}/{}-{}/{}'.format(self.id,self.__width,self.__height,self.__x,self.__y)
+        return '[Rectangle] ({}) {}/{}-{}/{}'.format(self.id,self.__width,self.__height,self.__x,self.__y)
         
