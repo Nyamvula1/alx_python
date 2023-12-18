@@ -79,11 +79,11 @@ class Rectangle(Base):
     def  __str__(self):
         '''Update the class Rectangle by overriding the __str__ method so that it returns'''
         return '[Rectangle] ({}) {}/{} - {}/{}'.format(self.id,self.__x,self.__y,self.__width,self.__height)
-    def update(self, *args, **kwargs):
+    def update(self, *args):
         '''Update the class Rectangle by updating the public method def update(self, *args): 
         by changing the prototype to update(self, *args, **kwargs) that assigns a key/value argument to attributes'''
         arguments= ['id','width','height','x','y']
-        for i, *args in enumerate(args[:5]):
+        for i, args in enumerate(args[:5]):
             setattr(self,arguments[i],args)
             
            
