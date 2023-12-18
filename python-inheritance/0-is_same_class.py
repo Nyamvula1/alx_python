@@ -1,9 +1,12 @@
 def is_same_class(obj, a_class):
-    return obj.__class__ is a_class
-a = 1
-result_int = is_same_class(a, int)
-print(result_int)
+    for a_class in a_class:
+        if obj.__class__ is a_class:
+            return True
+    return False
 
+#a = 1
+#if is_same_class(a, int, float, object):
+    #print("{} is an instance of one of the specified classes".format(a))
 
 
 #if is_same_class(a, int):
