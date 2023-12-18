@@ -66,4 +66,7 @@ class Rectangle(Base):
         '''Update the class Rectangle by adding the public method def area(self): 
         that returns the area value of the Rectangle instance.'''
         return self.__width * self.__height
-    
+    '''checks for the range and displays in height'''
+    def display(self):
+        for i in range(self.__height):
+            print('#' * self.__width)
