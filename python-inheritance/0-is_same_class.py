@@ -4,23 +4,21 @@ and it returns True if the class of obj is the same as the specified a_class,
 and False otherwise.
 '''
 def is_same_class(obj, a_class):
-    return obj.__class__ is a_class
-'''
-You initialize a variable a with the value 1.
-'''
-a = 1
-'''
-You call the is_same_class function for each of the classes (int, float, and object) 
-and store the results in result_int, result_float, and result_object. 
-Then, you print these results.
-'''
-result_int = is_same_class(a, int)
-result_float = is_same_class(a, float)
-result_object = is_same_class(a, object)
+    return type(obj) == a_class
 
-print(result_int)     # Output: True
-print(result_float)   # Output: False
-print(result_object)
+# a = 1
+# '''
+# You call the is_same_class function for each of the classes (int, float, and object) 
+# and store the results in result_int, result_float, and result_object. 
+# Then, you print these results.
+# '''
+# result_int = is_same_class(a, int)
+# result_float = is_same_class(a, float)
+# result_object = is_same_class(a, object)
+
+# print(result_int)     # Output: True
+# print(result_float)   # Output: False
+# print(result_object)
 
 
 '''
