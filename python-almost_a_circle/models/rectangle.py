@@ -82,9 +82,10 @@ class Rectangle(Base):
     def update(self, *args):
         '''Update the class Rectangle by updating the public method def update(self, *args): 
         by changing the prototype to update(self, *args, **kwargs) that assigns a key/value argument to attributes'''
-        attributes = ['id', 'width','height', 'x', 'y']
-        for i , arg in enumerate(args[:5]):
-            setattr(self ,attributes[i],arg)
+        if args is not None and len(args) is not 0:
+            list_atrr = ['id', 'width', 'height', 'x', 'y']
+            for i in range(len(args)):
+                setattr(self, list_atrr[i], args[i])
             
 
            
