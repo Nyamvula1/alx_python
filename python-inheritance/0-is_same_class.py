@@ -4,6 +4,7 @@ and it returns True if the class of obj is the same as the specified a_class,
 and False otherwise.
 '''
 def is_same_class(obj, a_class):
+    '''to check if it is true or false'''
     return type(obj) == a_class
 
 # a = 1
@@ -21,11 +22,7 @@ def is_same_class(obj, a_class):
 # print(result_object)
 
 
-'''
-Here, you use the is_same_class function to check whether 
-a is an instance of the classes int, float, and object.
-If a is an instance of a class, it prints a corresponding message.
-'''
+
 #if is_same_class(a, int):
     #print("{} is an instance of the class {}".format(a, int.__name__))
 #elif is_same_class(a, float):
