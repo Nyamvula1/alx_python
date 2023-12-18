@@ -68,5 +68,7 @@ class Rectangle(Base):
         return self.__width * self.__height
     '''checks for the range and displays in height'''
     def display(self):
+        '''Update the class Rectangle by adding the public method def display(self):
+        that prints in stdout the Rectangle instance with the character #'''
         for i in range(self.__height):
             print('#' * self.__width)
