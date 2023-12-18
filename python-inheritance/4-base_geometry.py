@@ -1,7 +1,4 @@
 '''defining the class'''
-from collections.abc import Iterable
-
-
 class BaseGeometry:
     '''initializing the method:area'''
     def area(self):
