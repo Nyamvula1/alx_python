@@ -28,10 +28,10 @@ class Rectangle(Base):
     @property
     def height(self):
         return self.__height
-      
+    '''sets and returns the value of the parameter assigned to the height'''  
     @height.setter
     def height(self, value):
-        
+        '''checks if the value is an integer or if value is less than zero, it returns the variable as the value'''
         if not isinstance(value, int):
             raise TypeError('height must be an integer')
         if value <= 0:
@@ -61,6 +61,7 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError('y must be >= 0')
         self.__y= value
+    '''method for returning the area of the rectangle'''
     def area(self):
         return self.__width * self.__height
     
