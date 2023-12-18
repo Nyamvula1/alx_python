@@ -13,7 +13,7 @@ class Rectangle(Base):
         '''uses @property to get and returns as a private variable'''
     @property
     def width(self):
-        return self.__height
+        return self.__width
     
     '''sets and returns the value of the parameter assigned to the width'''
     @width.setter
