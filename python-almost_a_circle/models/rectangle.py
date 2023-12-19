@@ -1,5 +1,5 @@
 '''imports from base class'''
-from base import Base
+from models.base import Base
 '''initializing the class'''
 class Rectangle(Base):
     '''creating instances of the class'''
