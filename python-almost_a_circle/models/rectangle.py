@@ -1,5 +1,5 @@
 '''imports from base class'''
-from models.base import Base
+from base import Base
 '''initializing the class'''
 class Rectangle(Base):
     '''creating instances of the class'''
@@ -62,10 +62,12 @@ class Rectangle(Base):
             raise ValueError('y must be >= 0')
         self.__y= value
     '''method for returning the area of the rectangle'''
+    
     def area(self):
         '''Update the class Rectangle by adding the public method def area(self): 
         that returns the area value of the Rectangle instance.'''
         return self.__width * self.__height
+    
     '''checks for the range and displays in height'''
     def display(self):
         '''Update the class Rectangle by adding the public method def display(self):
@@ -78,14 +80,37 @@ class Rectangle(Base):
             '''printing the output in a string'''
     def  __str__(self):
         '''Update the class Rectangle by overriding the __str__ method so that it returns'''
-        return '[Rectangle] ({}) {}/{} - {}/{}'.format(self.id,self.__x,self.__y,self.__width,self.__height)
+        return '[Rectangle] ({}) {}/{} - {}/{}'.format(self.id,self.x,self.y,self.width,self.height)
     def update(self, *args):
-        '''Update the class Rectangle by updating the public method def update(self, *args): 
-        by changing the prototype to update(self, *args, **kwargs) that assigns a key/value argument to attributes'''
-        if args is not None and len(args) is not 0:
-            list_atrr = ['id', 'width', 'height', 'x', 'y']
-            for i in range(len(args)):
-                setattr(self, list_atrr[i], args[i])
-            
+        if len(args) > 0:
+            if len(args) >= 1:
+                self.id = args[0]
+            if len(args) >= 2:
+                self.width = args[1]
+            if len(args) >= 3:
+                self.height = args[2]
+            if len(args) >= 4:
+                self.x = args[3]
+            if len(args) >= 5:
+                self.y = args[4]
+                
+# if __name__ == "__main__":
+
+#     r1 = Rectangle(10, 10, 10, 10)
+#     print(r1)
+
+#     r1.update(1)
+#     print(r1)
+
+#     r1.update(1, 1)
+#     print(r1)
+
+#     r1.update(1, 2, 3, 4, 5)
+#     print(r1)
+
+#     r1.update(1, 2, 3, 4)
+#     print(r1)
+    
+          
 
            
