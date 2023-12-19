@@ -1,5 +1,5 @@
 '''imports from base class'''
-from base import Base
+from models.base import Base
 '''initializing the class'''
 class Rectangle(Base):
     '''creating instances of the class'''
@@ -82,6 +82,9 @@ class Rectangle(Base):
         '''Update the class Rectangle by overriding the __str__ method so that it returns'''
         return '[Rectangle] ({}) {}/{} - {}/{}'.format(self.id,self.x,self.y,self.width,self.height)
     def update(self, *args):
+        '''The update method takes variable arguments 
+        (*args) and updates the instance attributes based on the values provided in args.
+        The order of the values in args corresponds to id, width, height, x, and y.'''
         if len(args) > 0:
             if len(args) >= 1:
                 self.id = args[0]
