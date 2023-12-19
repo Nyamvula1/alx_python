@@ -5,7 +5,7 @@ class Rectangle(Base):
     '''creating instances of the class'''
     def __init__(self, width, height, x=0, y=0, id=None):
         self.width = width
-        self.height =height
+        self.height = height
         self.x = x
         self.y = y
         '''calls the function from the base class'''
@@ -23,7 +23,7 @@ class Rectangle(Base):
             raise TypeError('width must be an integer')
         if value <= 0:
             raise ValueError('width must be > 0')
-        self.__width= value
+        self.__width = value
         
     @property
     def height(self):
@@ -82,37 +82,35 @@ class Rectangle(Base):
         '''Update the class Rectangle by overriding the __str__ method so that it returns'''
         return '[Rectangle] ({}) {}/{} - {}/{}'.format(self.id, self.x, self.y, self.width, self.height)
     
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         '''The update method takes variable arguments 
         (*args) and updates the instance attributes based on the values provided in args.
         The order of the values in args corresponds to id, width, height, x, and y.'''
-        if args:
-            if len(args) >= 1:
-                self.id = args[0]
-            if len(args) >= 2:
-                self.width = args[1]
-            if len(args) >= 3:
-                self.height = args[2]
-            if len(args) >= 4:
-                self.x = args[3]
-            if len(args) >= 5:
-                self.y = args[4]
+        arguments= ['id', 'width', 'height', 'x', 'y']
+        for i, args in enumerate(args[:6]): 
+           setattr(self,arguments[i],args)
+           
+        for key, value in kwargs.items():
+            if key in arguments:
+                setattr(self, key, value)
+        
+    
                 
 # if __name__ == "__main__":
 
 #     r1 = Rectangle(10, 10, 10, 10)
 #     print(r1)
 
-#     r1.update(1)
+#     r1.update(height=1)
 #     print(r1)
 
-#     r1.update(1, 1)
+#     r1.update(width=1, x=2)
 #     print(r1)
 
-#     r1.update(1, 2, 3, 4, 5)
+#     r1.update(y=1, width=2, x=3, id=89)
 #     print(r1)
 
-#     r1.update(1, 2, 3, 4)
+#     r1.update(x=1, height=2, y=3, width=4)
 #     print(r1)
     
           
