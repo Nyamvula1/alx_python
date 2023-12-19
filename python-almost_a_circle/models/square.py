@@ -12,19 +12,19 @@ class Square(Rectangle):
     '''function for getting and setting the attributes and returns the width and height'''
     @property
     def size(self):
-        return self.width
+        return self.__width
     
     @size.setter
     def size(self, value):
-        self.width = value
+        if not isinstance(value, int):
+            raise TypeError('width must be an integer')
+        if value <= 0:
+            raise ValueError('Width must be > 0')
     
-    @property
-    def size(self):
-        return self.height
+        self.__width = value
+        self.__height = value
     
-    @size.setter
-    def size(self, value):
-        self.height = value
+   
 
 # if __name__ == "__main__":
 
