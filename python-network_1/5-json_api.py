@@ -9,7 +9,7 @@ payload = {'our_letter': q}
 response= requests.post(url=url, data=payload)
 
 try:
-    if not response.json():
+    if response.json():
         print('No result')
     else:
         id = response.json().get('id')
