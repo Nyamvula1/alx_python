@@ -1,22 +1,27 @@
-import sys
 import requests
+import sys
 
-url= 'http://0.0.0.0:5000/search_user'
-'''this condition checks for the lenght of the arguments in the command line , if the length is 1 then it returns an empty string'''
-q =''if len(sys.argv) == 1 else sys.argv[1]
-'''payload-the letter is sent to the server in the format of a dictionary in the payload'''
-payload = {'our_letter': q}
-response= requests.post(url=url, data=payload)
+'''Variable to store our url and letter'''
+url = "http://0.0.0.0:5000/search_user"
+q = "" if len(sys.argv) == 1 else sys.argv[1]
+
+'''data to be sent to our url'''
+payload = {
+    'q': q
+}
+
+'''Post to the url'''
+response = requests.post(url=url, data=payload)
 
 try:
-    checkjson= response.json()
-    
-    if not checkjson:
-        print('No result')
+    check_json = response.json()
+    if not check_json:
+        print("No result")
     else:
-        id = checkjson.get('id')
-        name = checkjson.get('name')
-        print(f'[{id}] {name}')
+        id = check_json.get("id")
+        name = check_json.get("name")
+        print(f"[{id}] {name}")
+
 except ValueError:
     print('Not a valid JSON')
 
