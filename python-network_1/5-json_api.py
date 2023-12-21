@@ -9,11 +9,13 @@ payload = {'our_letter': q}
 response= requests.post(url=url, data=payload)
 
 try:
-    if response.json():
+    checkjson= response.json()
+    
+    if not checkjson:
         print('No result')
     else:
-        id = response.json().get('id')
-        name = response.json().get('name')
+        id = checkjson.get('id')
+        name = checkjson.get('name')
         print(f'[{id}] {name}')
 except ValueError:
     print('Not a valid JSON')
