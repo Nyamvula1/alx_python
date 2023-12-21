@@ -14,7 +14,7 @@ try:
     else:
         id = response.json()['id']
         name = response.json()['name']
-        
+        print(f'[{id}] {name}')
 except ValueError:
     print('Not a valid JSON')
 
