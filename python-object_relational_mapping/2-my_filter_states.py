@@ -14,7 +14,7 @@ db = MySQLdb.connect(user=username, passwd=password, db=database)
 c = db.cursor()
 
 # Use format to create the SQL query with user input
-query = "SELECT * FROM `states` WHERE `name` = '{}' ORDER BY `id`".format(state_name)
+query = "SELECT * FROM `states` WHERE LOWER (`name`) = LOWER('{}') ORDER BY `id`".format(state_name)
 c.execute(query)
 
 # Fetch and print the results
