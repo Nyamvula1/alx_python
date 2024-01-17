@@ -11,9 +11,12 @@ if __name__ == "__main__":
                FROM cities \
                INNER JOIN states ON state_id = states.id \
                WHERE states.name = %s \
-               ORDER BY cities.id, (sys.argv[4])
-               """)
+               ORDER BY cities.id""", (sys.argv[4])
+               )
 
     # Print the results as a comma-separated string
     cities = c.fetchall()
+    #join is used in joining the values in the list
     print(", ".join(city[0] for city in cities))
+    
+    c.close()
