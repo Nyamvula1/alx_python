@@ -7,8 +7,10 @@ if __name__ == "__main__":
     c = db.cursor()
 
     # Use query to select records where the second column matches the provided state name
+    
     query = "SELECT * FROM `states` WHERE name = %s"
     c.execute(query, (sys.argv[4],))
+    
     #Define a parameterized SQL query to select all 
     # records from the states table where the name 
     # column matches the provided state name. 

@@ -20,6 +20,12 @@ if __name__ == "__main__":
     # Close the cursor and database connection
     c.close()
     db.close()
+    
+    # for i, state in enumerate(states):
+    #     print(state[0], end='')
+    #     if i < len(states)-1:
+    #         print(', ', end='')
+    # print('')
     # Print the results as a comma-separated string
     # states = c.fetchall()
     # #join is used in joining the values in the list
