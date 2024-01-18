@@ -10,9 +10,12 @@ def print_states(username, password, database):
     session = Session()
 
     # Retrieve and print states
-    states = session.execute(select(State).order_by(State.id)).all()
+    states = session.query(State).all()
     for state in states:
         print(f"{state.id}: {state.name}")
+    
+    # Close the session
+    session.close()
 
 if __name__ == "__main__":
     # Check if enough command-line arguments are provided
