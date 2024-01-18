@@ -9,7 +9,7 @@ if __name__ == "__main__":
 
         Session = sessionmaker(bind=engine)
         session = Session()
-    states_a = session.query(State).filter(State.name.like('%a%')).all()
-    for state in states_a(State).order_by(State.id):
-        if "a" in state.name:
-            print("{}: {}".format(state.id, state.name))
+        states_a = session.query(State).filter(State.name.like('%a%')).all()
+        for state in states_a(State).order_by(State.id):
+            if "a" in state.name:
+                print("{}: {}".format(state.id, state.name))
