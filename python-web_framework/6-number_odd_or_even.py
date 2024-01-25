@@ -36,7 +36,14 @@ def pythone_int(n):
 
 @app.route("/number_odd_or_even/<n>")
 def python_num(n):
-    return render_template("6-number_odd_or_even.html", num = n)
+    if isinstance(n, int):
+        result = "even" if n % 2 == 0 else "odd"
+        return render_template('number_page.html', number=n, result=result)
+    else:
+        # If n is not an integer, return an error or redirect as needed
+        return "Error: Not an integer"
+    
+    #return render_template("6-number_odd_or_even.html", num = n)
     
 if __name__=="__main__":
     app.run(host='0.0.0.0',port=5000, debug=True)
