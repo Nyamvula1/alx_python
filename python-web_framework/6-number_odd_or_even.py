@@ -38,7 +38,7 @@ number is even or odd
 '''
 @app.route("/number_odd_or_even/int:<n>")
 def python_num(n):
-    if isinstance(n, int):
+    # if isinstance(n, int):
         result = "even" if n % 2 == 0 else "odd"
         return f"Number: {n} is {result}\n"
     #     return render_template('number_page.html', number=n, result=result)
