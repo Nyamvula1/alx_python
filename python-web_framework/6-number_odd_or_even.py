@@ -34,7 +34,7 @@ def python_integer(n):
 def pythone_int(n):
     return render_template("5-number.html", num = n)
 
-@app.route("/number_odd_or_even/<n>")
+@app.route("/number_odd_or_even/<int:n>")
 def python_num(n):
     if isinstance(n, int):
         result = "even" if n % 2 == 0 else "odd"
