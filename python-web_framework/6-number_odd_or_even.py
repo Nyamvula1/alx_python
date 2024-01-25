@@ -38,10 +38,15 @@ def pythone_int(n):
 def python_num(n):
     if isinstance(n, int):
         result = "even" if n % 2 == 0 else "odd"
-        return render_template('number_page.html', number=n, result=result)
-    else:
-        # If n is not an integer, return an error or redirect as needed
-        return "Error: Not an integer"
+         # Determine if the number is even or odd
+    
+    
+    # Return a simple text response
+    return f"Number: {n} is {result}\n"
+       # return render_template('number_page.html', number=n, result=result)
+    # else:
+    #     # If n is not an integer, return an error or redirect as needed
+    #     return "Error: Not an integer"
     
     #return render_template("6-number_odd_or_even.html", num = n)
     
