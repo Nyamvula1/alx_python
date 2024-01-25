@@ -18,7 +18,7 @@ def khadija(text):
     formated_text = text.replace("_", " ")
     return "C {}".format(formated_text)
 
-    #return f"C {formated_text}" 
+'''return f"C {formated_text}'''
 
 @app.route("/python/<text>")
 @app.route("/python/")
@@ -33,8 +33,10 @@ def python_integer(n):
 @app.route("/number_template/<int:n>")
 def pythone_int(n):
     return render_template("5-number.html", num = n)
-
-@app.route("/number_odd_or_even/int:n>")
+'''Determine if the 
+number is even or odd
+'''
+@app.route("/number_odd_or_even/int:<n>")
 def python_num(n):
     if isinstance(n, int):
         result = "even" if n % 2 == 0 else "odd"
@@ -43,7 +45,7 @@ def python_num(n):
         # If n is not an integer, return an error or redirect as needed
         return "Error: Not an integer"
     
-    #return render_template("6-number_odd_or_even.html", num = n)
+'''return render_template("6-number_odd_or_even.html", num = n)'''
     
 if __name__=="__main__":
     app.run(host='0.0.0.0',port=5000, debug=True)
